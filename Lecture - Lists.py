@@ -31,6 +31,8 @@ print(robot_santas_list)
 robot_santas_list.insert(3, "Aaden")
 print(robot_santas_list)
 
+robot_santas_list.pop(11)
+print(robot_santas_list)
 
 #This is a number list. You can place any kind of object in a list,
 #not just strings.
