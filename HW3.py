@@ -1,7 +1,6 @@
-#Name:
+#Name: Coach Mack
 #Class: 6th Hour
 #Assignment: HW3
-
 #1. Print Hello World!
 print("Hello World!")
 #2. Take the variables below and change the name of the variables to match the type of
@@ -12,30 +11,32 @@ print("Hello World!")
 
 #DO NOT CHANGE THE VALUE OF THE VARIABLE.
 
-Var1 = 4
-Var2 = "Box"
-Var3 = True
-Var4 = "Nineteen"
-Var5 = "Rope"
-Var6 = 19
-Var7 = "19"
-Var8 = 2
-Var9 = True
-Var10 = False
-Var11 = "True"
-Var12 = "False"
-Var13 = 5
-Var14 = "The"
-Var15 = "Game"
-Var16 = False
-Var17 = 3
-Var18 = 2
-Var19 = 1
-Var20 = Var11
-Var21 = Var12
-Var22 = Var4
-Var23 = Var14
-Var24 = Var15
-Var25 = 6
+intVar1 = 4
+strVar2 = "Box"
+boolVar3 = True
+strVar4 = "Nineteen"
+strVar5 = "Rope"
+intVar6 = 19
+strVar7 = "19"
+intVar8 = 2
+boolVar9 = True
+boolVar10 = False
+strVar11 = "True"
+strVar12 = "False"
+intVar13 = 5
+strVar14 = "The"
+strVar15 = "Game"
+boolVar16 = False
+intVar17 = 3
+intVar18 = 2
+intVar19 = 1
+strVar20 = strVar11
+strVar21 = strVar12
+strVar22 = strVar4
+strVar23 = strVar14
+strVar24 = strVar15
+intVar25 = 6
 
 #3. Take all the variables you labeled as "integer", add them together, and print the result.
+
+print(intVar1 + intVar6 + intVar8 + intVar13 + intVar17 + intVar18 + intVar19 + intVar25)
