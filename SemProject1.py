@@ -1,4 +1,4 @@
-#Name:
+#Name: Coach Mack
 #Class: 6th Hour
 #Assignment: Semester Project 1
 
@@ -14,7 +14,7 @@ import time
 
 partyDict = {
     "LaeZel" : {
-        "HO" : 48,
+        "HP" : 48,
         "Init" : 1,
         "AC" : 17,
         "AtkMod": 6,
@@ -86,7 +86,14 @@ enemyDict = {
 #1. Rolling for 'initiative' to see who goes first. This is determined by rolling a
 #20-sided die (d20) and adding their initiative modifier (If the roll is the same,
 #assume the hero goes first).
-
+gale_init_roll = random.randint(1,20) + partyDict["Gale"]["Init"]
+orc_init_roll = random.randint(1,20) + enemyDict["Orc"]["Init"]
+if gale_init_roll >= orc_init_roll:
+    print("Gale goes first!")
+    hero_first = True
+else:
+    print("Orc goes first!")
+    hero_first = False
 #2. Rolling to attack. This is determined by rolling a 20-sided die (d20) and adding their
 #attack modifier. The attack hits if it matches or is higher than the target's Armor Class (AC).
 #If the d20 rolled to attack is an unmodified ("natural") 20, the attack automatically hits and
@@ -98,4 +105,80 @@ enemyDict = {
 #4. The second in initiative rolls to attack (and rolls damage) afterwards.
 
 #5. Repeat steps 2-5 until one of the characters is dead.
+
+if hero_first == True:
+    while partyDict["Gale"]["HP"] > 0 or enemyDict["Orc"]["HP"] > 0:
+        gale_atk_roll = random.randint(1, 20)
+        if gale_atk_roll == 20:
+            print("Critical Hit!")
+            enemyDict["Orc"]["HP"] -= (partyDict["Gale"]["Damage"] * 2)
+        elif gale_atk_roll == 1:
+            print("Critial Miss!")
+        elif gale_atk_roll + partyDict["Gale"]["AtkMod"] >= enemyDict["Orc"]["AC"]:
+            print("Gale hits!")
+            enemyDict["Orc"]["HP"] -= (partyDict["Gale"]["Damage"])
+        elif gale_atk_roll + partyDict["Gale"]["AtkMod"] < enemyDict["Orc"]["AC"]:
+            print("Gale misses!")
+
+        if enemyDict["Orc"]["HP"] <= 0:
+            print("The Orc is dead!")
+            break
+        else:
+            print(f"Orc has {enemyDict["Orc"]["HP"]} HP")
+
+        orc_atk_roll = random.randint(1, 20)
+        if orc_atk_roll == 20:
+            print("Critical Hit!")
+            partyDict["Gale"]["HP"] -= (enemyDict["Orc"]["Damage"] * 2)
+        elif orc_atk_roll == 1:
+            print("Critial Miss!")
+        elif orc_atk_roll + enemyDict["Orc"]["AtkMod"] >= partyDict["Gale"]["AC"]:
+            print("Orc hits!")
+            partyDict["Gale"]["HP"] -= (enemyDict["Orc"]["Damage"])
+        elif orc_atk_roll + enemyDict["Orc"]["AtkMod"] < partyDict["Gale"]["AC"]:
+            print("Orc misses!")
+
+        if partyDict["Gale"]["HP"] <= 0:
+            print("The Gale is dead!")
+            break
+        else:
+            print(f"Gale has {partyDict["Gale"]["HP"]} HP.")
+
+elif hero_first == False:
+    while partyDict["Gale"]["HP"] > 0 or enemyDict["Orc"]["HP"] > 0:
+        orc_atk_roll = random.randint(1, 20)
+        if orc_atk_roll == 20:
+            print("Critical Hit!")
+            partyDict["Gale"]["HP"] -= (enemyDict["Orc"]["Damage"] * 2)
+        elif orc_atk_roll == 1:
+            print("Critial Miss!")
+        elif orc_atk_roll + enemyDict["Orc"]["AtkMod"] >= partyDict["Gale"]["AC"]:
+            print("Orc hits!")
+            partyDict["Gale"]["HP"] -= (enemyDict["Orc"]["Damage"])
+        elif orc_atk_roll + enemyDict["Orc"]["AtkMod"] < partyDict["Gale"]["AC"]:
+            print("Orc misses!")
+
+        if partyDict["Gale"]["HP"] <= 0:
+            print("The Gale is dead!")
+            break
+        else:
+            print(f"Gale has {partyDict["Gale"]["HP"]} HP.")
+
+        gale_atk_roll = random.randint(1, 20)
+        if gale_atk_roll == 20:
+            print("Critical Hit!")
+            enemyDict["Orc"]["HP"] -= (partyDict["Gale"]["Damage"] * 2)
+        elif gale_atk_roll == 1:
+            print("Critial Miss!")
+        elif gale_atk_roll + partyDict["Gale"]["AtkMod"] >= enemyDict["Orc"]["AC"]:
+            print("Gale hits!")
+            enemyDict["Orc"]["HP"] -= (partyDict["Gale"]["Damage"])
+        elif gale_atk_roll + partyDict["Gale"]["AtkMod"] < enemyDict["Orc"]["AC"]:
+            print("Gale misses!")
+
+        if enemyDict["Orc"]["HP"] <= 0:
+            print("The Orc is dead!")
+            break
+        else:
+            print(f"Orc has {enemyDict["Orc"]["HP"]} HP")
 
