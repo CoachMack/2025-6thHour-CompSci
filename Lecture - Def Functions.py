@@ -64,7 +64,7 @@ def coin_flip():
         print("You lose!")
     repeat_game()
 
-#Note here how you can call the function inside of itself to repeat the code.
+#Note here how you can call the function inside of another function to repeat the code.
 def repeat_game():
     player_input = input("Do you want to play again? Y/N")
 
