@@ -1,5 +1,5 @@
 #Name:
-#Class: 5th Hour
+#Class: 6th Hour
 #Assignment: HW19
 
 #1. Import the def functions created in problem 1-4 from HW16
