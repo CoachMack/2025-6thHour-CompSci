@@ -1,5 +1,5 @@
 #Name: Coach Mack
-#Class: 5th Hour
+#Class: 6th Hour
 #Assigment: SC4
 import random
 
