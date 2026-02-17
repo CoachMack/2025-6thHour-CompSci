@@ -27,11 +27,7 @@ def loop(end):
     for i in range(1, end + 1):
         print(i)
 #5. Call all of the functions created in 1 - 4 with relevant arguments.
-hello_world()
-average(1,2,3)
-average_list(5,6,7,8)
-animals("Monkey", "Tiger", "Dog", "Cat", "Pangolin", "Fox")
-loop(5)
+
 #6. Create a variable x that has the value of 2. Print x
 x = 2
 print(x)

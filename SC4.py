@@ -1,7 +1,7 @@
-#Name:
+#Name: Coach Mack
 #Class: 5th Hour
 #Assigment: SC4
-
+import random
 
 #After an extended leave, the team lead for the RPG developer is back, and he wants to continue the project.
 #He wants to prototype the character creation model but first needs something that rolls stats for the characters.
@@ -11,3 +11,16 @@
 
 #Once that is done, to ensure that the average of the statblock is fair (somewhere roughly between 12-13), he wants you
 #to plug it into a calculator (SC5) and print the average.
+
+statblock = []
+#Make a def function
+def roll_statblock():
+    for i in range(6):
+        stat1 = [random.randint(1, 6), random.randint(1, 6), random.randint(1, 6), random.randint(1, 6)]
+        stat1.sort(reverse=True)
+        stat_sum = stat1[0] + stat1[1] + stat1[2]
+        statblock.append(stat_sum)
+
+roll_statblock()
+
+print(statblock)
