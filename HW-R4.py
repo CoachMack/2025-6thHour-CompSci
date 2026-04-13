@@ -1,4 +1,4 @@
-#Name:
+#Name: Coach Mack
 #Class: 6th Hour
 #Assignment: HW-R4
 
@@ -26,3 +26,4 @@
 #11. Use a lambda function to add the Fibonacci numbers together and add the sum to a random custom month.
 
 #12. Print ("\u2764 \u0041 \u0050 \u0052 \u0049 \u004C \u0020 \u0046 \u004F \u004F \u004C \u0053 \u0021 \u2764") and ignore steps 1 through 11
+print("\u2764 \u0041 \u0050 \u0052 \u0049 \u004C \u0020 \u0046 \u004F \u004F \u004C \u0053 \u0021 \u2764")
