@@ -1,4 +1,4 @@
-#Name: Coach Mack
+#Name:
 #Class: 6th Hour
 #Assignment: HW-R6
 
