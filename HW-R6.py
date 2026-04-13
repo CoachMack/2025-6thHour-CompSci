@@ -12,6 +12,6 @@
 #4. Call the function from #3 but with a new list of different numbers.
 
 #5. Create a def function that takes two numbers as arguments, x and y. Inside the function, create a for loop
-#with a range of 10. Inside the loop, make z equal the sum of x and y, make x equal y, then y equal z.
+#with a range of 10. Inside the loop, print x, make z equal the sum of x and y, make x equal y, then y equal z.
 
 #6. Call the function from #5 with the arguments for x and y being 0 and 1.
