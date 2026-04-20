@@ -9,7 +9,7 @@
 #document the progression of the project.
 
 #You have until the end of the week before finals week is due to brainstorm an idea together, and then
-#turn that idea into functioning code. The code itself must have at least: 1 dictionary or list,
+#turn that idea into functioning code. The code itself must have at least: 1 class, 1 dictionary or list,
 #1 loop, 2 if statements (elif and else statements tied to it does not count towards the total, nor do
 #nested if statements),1 variable with a user input, and 1 form of an assignment operator. You are free
 #to add whatever else you feel is necessary to complete your concept. You will be graded based on how
